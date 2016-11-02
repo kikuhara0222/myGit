@@ -8,15 +8,16 @@
 	<h1>Hello Page</h1>
 	<p th:text="${msg}">hello world</p>
 	<form action="/" method="post">
-		名前:<input type="text" name="name" /><br/>
-		年齢:<input type="text" name="age" /><br/>
-		<input type="submit" value="sousin" />
+		<div>
+			チェックボックス1:<input type="checkbox" id="check1" name="check1" /><br />
+			チェックボックス2:<input type="checkbox" id="check2" name="check2" /><br />
+		</div>
+		<div>
+			男性:<input type="radio" id="radioA" name="radio1" value="mele" /><br />
+			女性:<input type="radio" id="radioB" name="radio1" value="female" /><br />
+		</div>
+		
+		<input type="submit" value="push" />
 	</form>
-	
-	<div th:if="${form} != null">
-		<p th:text = "${form.name}">name</p>
-		<p th:text = "${form.age}">age</p>
-	</div>
-	
 </body>
 </html>
