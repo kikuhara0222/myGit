@@ -6,6 +6,23 @@
 </head>
 <body>
 	<h1>Hello Page</h1>
-	<p th:utext="${msg}">msg</p>
+	<p th:text="${msg}"></p>
+	
+	<form action="/" method="post">
+		<input type="submit" value="ボタン" />
+	</form>
+	
+	<div th:if="${colors} != null">
+		<table>
+			<tr>
+				<th>いろ</th>
+				<th>漢字</th>
+			</tr>
+			<tr th:each="iro:${colors}">
+				<td th:text="${iro.colorName}"></td>
+				<td th:text="${iro.colorKanji}"></td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
