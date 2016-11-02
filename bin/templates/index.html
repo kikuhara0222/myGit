@@ -6,18 +6,6 @@
 </head>
 <body>
 	<h1>Hello Page</h1>
-	<p th:text="${msg}">hello world</p>
-	<form action="/" method="post">
-		<div>
-			チェックボックス1:<input type="checkbox" id="check1" name="check1" /><br />
-			チェックボックス2:<input type="checkbox" id="check2" name="check2" /><br />
-		</div>
-		<div>
-			男性:<input type="radio" id="radioA" name="radio1" value="mele" /><br />
-			女性:<input type="radio" id="radioB" name="radio1" value="female" /><br />
-		</div>
-		
-		<input type="submit" value="push" />
-	</form>
+	<p th:utext="${msg}">msg</p>
 </body>
 </html>
