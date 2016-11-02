@@ -13,14 +13,14 @@
 	</form>
 	
 	<div th:if="${colors} != null">
-		<table>
+		<table th:inline="text">
 			<tr>
 				<th>いろ</th>
 				<th>漢字</th>
 			</tr>
-			<tr th:each="iro:${colors}">
-				<td th:text="${iro.colorName}"></td>
-				<td th:text="${iro.colorKanji}"></td>
+			<tr th:each="iro : ${colors}">
+				<td>[[${iro.colorName}]]</td>
+				<td>[[${iro.colorKanji}]]</td>
 			</tr>
 		</table>
 	</div>

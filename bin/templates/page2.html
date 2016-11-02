@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Page2</h1>
+
+	<form action="/page2" method="POST">
+		数字1<input type="text" name="num1" /><br/>
+		数字2<input type="text" name="num2" />
+		<input type="submit" value="button" />
+	</form>
+	
+	<div th:if="${form} != null">
+		<p th:text="'数字1: ' + ${form.num1} + ' 数字2: ' + ${form.num2}"></p>
+		
+		<label th:text="${form.num1} + ' &gt; ' + ${form.num2}"></label>
+		<div th:if="${form.num1 gt form.num2}">
+			<p th:text="${form.num1} + 'は' + ${form.num2} + 'より大きい'"></p>
+		</div>
+		<br/>
+		
+		<label th:text="${form.num1} + ' &gt;= ' + ${form.num2}"></label>
+		<div th:if="${form.num1 ge form.num2}">
+			<p th:text="${form.num1} + 'は' + ${form.num2} + 'と同じか大きい'"></p>
+		</div>
+		<br/>
+		
+		<label th:text="${form.num1} + ' &lt; ' + ${form.num2}"></label>
+		<div th:if="${form.num1 lt form.num2}">
+			<p th:text="${form.num1} + 'は' + ${form.num2} + 'より小さい'"></p>
+		</div>
+		<br/>
+		
+		<label th:text="${form.num1} + ' &lt;= ' + ${form.num2}"></label>
+		<div th:if="${form.num1 le form.num2}">
+			<p th:text="${form.num1} + 'は' + ${form.num2} + 'と同じか小さい'"></p>
+		</div>
+		<br/>
+		
+	</div>
+
+</body>
+</html>

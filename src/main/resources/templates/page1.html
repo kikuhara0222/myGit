@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1 th:text="#{aaa.title}">page1</h1>
+	<hr/>
+	<h3>メッセージ式</h3>
+	<p th:text="#{aaa.message}">msg</p>
+	<p th:text="#{aaa.message1(${name})}"></p>
+	<br/>	
+	<hr/>
+	
+	<h3>四則演算</h3>
+	<p th:text="11 + 5">11 + 5</p>
+	<p th:text="11 - 5">11 - 5</p>
+	<p th:text="11 * 5">11 * 5</p>
+	<p th:text="11 / 5">11 / 5</p>
+	<br/>
+	<hr/>
+</body>
+</html>
